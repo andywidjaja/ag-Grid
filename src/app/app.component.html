@@ -1,0 +1,23 @@
+<tabs>
+  <tab tabTitle="Main">
+    <button (click)="getSelectedRows()">Get Selected Rows</button>
+
+    <ag-grid-angular 
+        #agGrid
+        style="width: 1350px; height: 1000px;" 
+        class="ag-theme-balham-dark"
+        [enableSorting]="true"
+        [enableFilter]="true"
+        [pagination]="true"
+        [enableColResize]="true"
+        [defaultColDef]="defaultColDef"
+        [rowData]="rowData | async" 
+        [columnDefs]="columnDefs"
+        rowSelection="multiple"
+        >
+    </ag-grid-angular>
+  </tab>
+  <tab tabTitle="Bar">
+    I am the bar content
+  </tab>
+<tabs>
